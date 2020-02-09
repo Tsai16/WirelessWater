@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class RecipeActivity extends AppCompatActivity {
 
@@ -17,5 +19,15 @@ public class RecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
+
+        ImageButton b = findViewById(R.id.imageButton_food);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inflate = new Intent(RecipeActivity.this, InflateRecipeActivity.class);
+                startActivity(inflate);
+            }
+        });
     }
 }
