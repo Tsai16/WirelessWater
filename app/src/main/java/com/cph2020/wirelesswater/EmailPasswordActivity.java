@@ -84,7 +84,7 @@ public class EmailPasswordActivity extends AppCompatActivity {
             findViewById(R.id.li_password_et).setVisibility(View.GONE);
             findViewById(R.id.su_email_et).setVisibility(View.GONE);
             findViewById(R.id.su_password_et).setVisibility(View.GONE);*/
-
+            NewUserModel.getUserFromDB();
             Intent homeActivityIntent = new Intent(this, HomeActivity.class);
             startActivity(homeActivityIntent);
         } else {

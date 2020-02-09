@@ -43,14 +43,11 @@ public class SetupUserActivity extends AppCompatActivity {
                 String al = allergens.getText().toString();
                 al = al.replaceAll(" ", "");
                 String[] alls = al.split(",");
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference();
 
 
-                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-
-                NewUserModel.addNewUserToDB(myRef, n, a, w, h, s, alls, email);
                 UserSingleton.getInstance().createUserSingleton(n,a,w,h,s,alls);
+
+                NewUserModel.addNewUserToDB();
 
                 Intent homeActivityIntent = new Intent(SetupUserActivity.this, HomeActivity.class);
                 startActivity(homeActivityIntent);

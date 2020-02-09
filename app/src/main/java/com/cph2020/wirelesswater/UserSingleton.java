@@ -3,7 +3,12 @@ package com.cph2020.wirelesswater;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 class UserSingleton {
     private static UserSingleton ourInstance = null;
@@ -23,6 +28,7 @@ class UserSingleton {
     private String[] allergens;
     private Date date;
     private FirebaseUser firebaseUser;
+    private Map<String, Object> map;
 
     private UserSingleton(){
 
@@ -108,5 +114,26 @@ class UserSingleton {
         this.sex = sex;
         this.allergens = allergens;
         this.date = new Date();
+    }
+
+    public Map<String, Object> UserMap() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+
+        Map<String, Object> features = new HashMap<>();
+        features.put("name", name);
+        features.put("age", age);
+        features.put("weight", weight);
+        features.put("height", height);
+        features.put("sex", sex);
+        features.put("allergens", Arrays.asList(allergens));
+        features.put("start_date", dateFormat.format(date));
+
+        map = features;
+        return features;
+    }
+
+    public void setUserMap(Map<String, Object> m){
+        map = m;
     }
 }
