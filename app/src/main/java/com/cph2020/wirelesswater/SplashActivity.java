@@ -49,7 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
+                Intent intent = new Intent(SplashActivity.this,SetupUserActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_up, R.anim.fade_out);
                 finish();

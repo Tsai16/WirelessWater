@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/homeActivity">
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.cph2020.wirelesswater.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" >
+        <action
+            android:id="@+id/action_homeActivity_to_feed"
+            app:destination="@id/feed"
+            app:enterAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_homeActivity_to_search"
+            app:destination="@id/search"
+            app:enterAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_homeActivity_to_profile"
+            app:destination="@id/profile"
+            app:enterAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_out" />
+    </activity>
+    <fragment android:id="@+id/search" />
+    <fragment android:id="@+id/feed" />
+    <fragment android:id="@+id/profile" />
+    <fragment android:id="@+id/recipe" />
+</navigation>
