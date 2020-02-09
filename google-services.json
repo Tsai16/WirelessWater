@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "867030299929",
+    "firebase_url": "https://wirelesswater-38496.firebaseio.com",
+    "project_id": "wirelesswater-38496",
+    "storage_bucket": "wirelesswater-38496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867030299929:android:88fa5f7f658a09b7e70188",
+        "android_client_info": {
+          "package_name": "com.cph2020.wirelesswater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867030299929-fbjn5n9rj330gbeisvs63n34dcrnim3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkHn97OX5BXoDVn4NJ9jKqfQ94Zd8ELGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867030299929-fbjn5n9rj330gbeisvs63n34dcrnim3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
