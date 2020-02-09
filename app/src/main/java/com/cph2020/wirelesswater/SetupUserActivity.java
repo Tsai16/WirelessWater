@@ -49,8 +49,8 @@ public class SetupUserActivity extends AppCompatActivity {
 
                 NewUserModel.addNewUserToDB();
 
-                Intent homeActivityIntent = new Intent(SetupUserActivity.this, HomeActivity.class);
-                startActivity(homeActivityIntent);
+                Intent recipeActivityIntent = new Intent(SetupUserActivity.this, RecipeActivity.class);
+                startActivity(recipeActivityIntent);
             }
         });
 

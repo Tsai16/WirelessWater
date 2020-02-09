@@ -14,8 +14,6 @@ import com.google.firebase.FirebaseApp;
 public class SplashActivity extends AppCompatActivity {
 
     Button settingsButton;
-    TextView splashtitle;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +22,9 @@ public class SplashActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         settingsButton =  findViewById(R.id.settings_button);
-        splashtitle = findViewById(R.id.splashTitle);
 
         AlphaAnimation fadeIn = new AlphaAnimation(1.0f , 0.0f ) ;
         AlphaAnimation fadeOut = new AlphaAnimation( 0.0f , 1.0f ) ;
-        splashtitle.startAnimation(fadeIn);
-        splashtitle.startAnimation(fadeOut);
         settingsButton.startAnimation(fadeIn);
         settingsButton.startAnimation(fadeOut);
 //        fadeIn.setDuration(1000);
