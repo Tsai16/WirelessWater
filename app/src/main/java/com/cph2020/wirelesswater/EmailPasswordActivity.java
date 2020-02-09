@@ -43,7 +43,9 @@ public class EmailPasswordActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            UserSingleton.getInstance().setFirebaseUser(user);
+                            Intent setupUserActivityIntent = new Intent(EmailPasswordActivity.this, SetupUserActivity.class);
+                            startActivity(setupUserActivityIntent);
                         } else {
                             Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

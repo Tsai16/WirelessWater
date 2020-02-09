@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "867030299929-tqs36u5niun8529bb37e0tjc4n6rjtac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cph2020.wirelesswater",
+            "certificate_hash": "7aeb44ae968a0db17fdb50af418dcf833e353640"
+          }
+        },
+        {
           "client_id": "867030299929-fbjn5n9rj330gbeisvs63n34dcrnim3p.apps.googleusercontent.com",
           "client_type": 3
         }
