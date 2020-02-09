@@ -20,7 +20,7 @@ public class RecipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
 
-        ImageButton b = findViewById(R.id.imageButton_food);
+        ImageButton b = findViewById(R.id.food_butt);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
